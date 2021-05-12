@@ -3,11 +3,11 @@ steps:
   args: ['install']
 - name: 'gcr.io/cloud-builders/npm'
   args: ['run', 'create-env']
-env:
-- 'JWT_PRIVATE_KEY=${_JWT_PRIVATE_KEY}'
-- 'JWT_PUBLIC_KEY=${_JWT_PUBLIC_KEY}'
-- 'SESSION_SERVER=${_SESSION_SERVER}'
-- 'UI_SERVER=${_UI_SERVER}'
+  env:
+  - 'JWT_PRIVATE_KEY=${_JWT_PRIVATE_KEY}'
+  - 'JWT_PUBLIC_KEY=${_JWT_PUBLIC_KEY}'
+  - 'SESSION_SERVER=${_SESSION_SERVER}'
+  - 'UI_SERVER=${_UI_SERVER}'
 - name: 'gcr.io/cloud-builders/gcloud'
-args: ['app', 'deploy']
-timeout: '1600s'
+  args: ['app', 'deploy']
+  timeout: '1600s'
