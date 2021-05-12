@@ -1,8 +1,10 @@
 steps:
-- name: "gcr.io/cloud-builders/npm"
-args: ["--v"]
-- name: "gcr.io/cloud-builders/npm"
-args: ["run", "create-env"]
+- name: "node"
+  entrypoint: npm
+  args: ["install"]
+- name: "node"
+  entrypoint: npm
+  args: ["run", "create-env"]
 env:
 - 'SESSION_SERVER=${_SESSION_SERVER}'
 - 'JWT_PUBLIC_KEY=${_JWT_PUBLIC_KEY}'
