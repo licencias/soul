@@ -1,9 +1,7 @@
 steps:
 - name: 'gcr.io/cloud-builders/npm'
-  entrypoint: 'npm'
   args: ['install']
-- name: 'node'
-  entrypoint: 'npm'
+- name: 'gcr.io/cloud-builders/npm'
   args: ['run', 'create-env']
 env:
 - 'JWT_PRIVATE_KEY=${_JWT_PRIVATE_KEY}'
