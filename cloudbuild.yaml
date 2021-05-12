@@ -1,8 +1,6 @@
 steps:
 - name: node
 entrypoint: npm
-- name: node
-entrypoint: npm
 args: ["run", "create-env"]
 env:
 - 'SESSION_SERVER=${_SESSION_SERVER}'
