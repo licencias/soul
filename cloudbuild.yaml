@@ -1,7 +1,7 @@
 steps:
 - name: 'node'
 entrypoint: npm
-args: ['install','./scripts/generate-ssl.sh']
+args: ['install','scripts/generate-ssl.sh']
 - name: node
 entrypoint: npm
 args: ["run", "create-env"]
