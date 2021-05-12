@@ -6,9 +6,9 @@ steps:
   entrypoint: npm
   args: ["run", "create-env"]
 env:
-- 'SESSION_SERVER=${_SESSION_SERVER}'
-- 'JWT_PUBLIC_KEY=${_JWT_PUBLIC_KEY}'
 - 'JWT_PRIVATE_KEY=${_JWT_PRIVATE_KEY}'
+- 'JWT_PUBLIC_KEY=${_JWT_PUBLIC_KEY}'
+- 'SESSION_SERVER=${_SESSION_SERVER}'
 - 'UI_SERVER=${_UI_SERVER}'
 - name: "gcr.io/cloud-builders/gcloud"
 args: ["app", "deploy"]
