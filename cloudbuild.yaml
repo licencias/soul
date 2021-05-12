@@ -1,5 +1,8 @@
 steps:
-- name: node
+- name: 'gcr.io/cloud-builders/npm'
+entrypoint: npm
+args: ['install']
+- name: gcr.io/cloud-builders/npm
 entrypoint: npm
 args: ["run", "create-env"]
 env:
