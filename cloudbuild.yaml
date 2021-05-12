@@ -1,9 +1,9 @@
 steps:
 - name: 'gcr.io/cloud-builders/'
-entrypoint: npm
+entrypoint: 'npm'
 args: ['install']
 - name: 'gcr.io/cloud-builders/'
-entrypoint: npm
+entrypoint: 'npm'
 args: ["run", "create-env"]
 env:
 - 'SESSION_SERVER=${_SESSION_SERVER}'
