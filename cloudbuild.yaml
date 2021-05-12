@@ -1,6 +1,6 @@
 steps:
 - name: "gcr.io/cloud-builders/npm"
-args: ["install"]
+args: ["--v"]
 - name: "gcr.io/cloud-builders/npm"
 args: ["run", "create-env"]
 env:
