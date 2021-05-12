@@ -2,7 +2,7 @@ steps:
 - name: "gcr.io/cloud-builders/npm"
   args: ["install"]
 - name: "gcr.io/cloud-builders/npm"
-  args: ["run", "i env-create"]
+  args: ["run"]
 env:
 - 'SESSION_SERVER=${_SESSION_SERVER}'
 - 'JWT_PUBLIC_KEY=${_JWT_PUBLIC_KEY}'
