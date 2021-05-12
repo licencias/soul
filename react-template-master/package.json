@@ -1,0 +1,88 @@
+{
+  "name": "soulmachines-whitelabel",
+  "version": "1.0.2",
+  "description": "A white label UI for new projects",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/soulmachines/react-template.git"
+  },
+  "private": true,
+  "main": "webpack.config.js",
+  "scripts": {
+    "dev": "webpack-dev-server --mode development",
+    "prod": "webpack --mode production",
+    "build:ci": "webpack --mode production",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/plugin-proposal-class-properties": "^7.3.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.3.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "@sentry/browser": "4.6.4",
+    "@soulmachines/smwebsdk": "^8.5.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.1.0",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-styled-components": "^1.10.0",
+    "clean-webpack-plugin": "^0.1.19",
+    "country-flag-icons": "^1.2.10",
+    "detect-browser": "^4.8.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.10.0",
+    "enzyme-to-json": "^3.3.5",
+    "eslint": "^5.4.0",
+    "eslint-config-strongloop": "^2.1.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-react": "^7.11.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^2.0.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-harddisk-plugin": "^0.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "img-loader": "^3.0.0",
+    "jest": "^24.1.0",
+    "jest-styled-components": "^6.3.1",
+    "lightbox-react": "^0.3.7",
+    "lodash-es": "^4.17.15",
+    "nanobus": "^4.4.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-markdown": "^4.3.1",
+    "react-player": "^2.9.0",
+    "react-redux": "^5.0.7",
+    "react-svg": "^8.0.3",
+    "react-transition-group": "^2.9.0",
+    "redux": "^4.0.0",
+    "redux-mock-store": "^1.5.3",
+    "simplebar-react": "^1.0.0-alpha.9",
+    "styled-components": "^4.2.0",
+    "styled-normalize": "^8.0.6",
+    "svgo": "^1.2.1",
+    "svgo-loader": "^2.2.0",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5",
+    "webrtc-adapter": "^7.4.0",
+    "whatwg-fetch": "^3.0.0"
+  },
+  "devDependencies": {
+    "dotenv": "^7.0.0"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(svg|png)$": "<rootDir>/tests/mocks/file.js",
+      "@(constants|components|contexts|store|style|utils)/(.*)$": "<rootDir>/src/$1/$2",
+      "@tests/(.*)$": "<rootDir>/tests/$1"
+    },
+    "setupFiles": [
+      "./tests/setup.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "globals": {}
+  }
+}

@@ -1,0 +1,10 @@
+
+# directories
+node_modules
+certs
+dist
+ssl
+
+# files
+.env
+.env*
